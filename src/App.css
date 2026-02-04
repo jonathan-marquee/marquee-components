@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0a0e12 0%, #14191E 50%, #1a2129 100%);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00D4AA 0%, #6366F1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #9CA3AF;
+  font-size: 14px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  color: #9CA3AF;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.nav-button.active {
+  background: linear-gradient(135deg, rgba(0, 212, 170, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+  color: #00D4AA;
+  border: 1px solid rgba(0, 212, 170, 0.3);
+}
+
+.nav-icon {
+  font-size: 16px;
+}
+
+/* Main Content */
+.main {
+  min-height: 500px;
+}
+
+.component-section {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  color: #6B7280;
+  font-size: 14px;
+}
+
+/* Position Selector */
+.position-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.position-button {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #9CA3AF;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.position-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.position-button.active {
+  background: rgba(0, 212, 170, 0.15);
+  border-color: rgba(0, 212, 170, 0.3);
+  color: #00D4AA;
+}
+
+/* Chart Container */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.chart-container.wide {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Chart Info */
+.chart-info {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.chart-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #9CA3AF;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chart-info pre {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #00D4AA;
+}
+
+/* Footer */
+.footer {
+  margin-top: 60px;
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer p {
+  color: #6B7280;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.footer strong {
+  color: #00D4AA;
+}
+
+.footer .tech {
+  font-size: 11px;
+  color: #4B5563;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px 16px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .nav {
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .nav-button {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .nav-label {
+    display: none;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+  }
+
+  .position-selector {
+    flex-wrap: wrap;
+  }
+}
